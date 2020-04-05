@@ -12,6 +12,7 @@ def main():
 
     parser.add_argument('image', help='Path to image file.', type=str)
     parser.add_argument('--point-radius', help='Point radius for Poisson-disc sampling.', type=float)
+    parser.add_argument('--memory-save-mode', help='Run in memory save mode.', action='store_true')
 
     args = parser.parse_args()
 
@@ -42,7 +43,7 @@ def main():
 
     points = poisson_disk(r, width, height)
 
-    result = voronoi(points, data)
+    result = voronoi(points, data, memory_save_mode=args.memory_save_mode)
 
     nimg = Image.fromarray(result)
     nimg.show()
