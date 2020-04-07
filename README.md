@@ -8,7 +8,7 @@ sampling method.
 
 Example usage:
 ```shell script
-python run.py cat_original.jpg --point-radius 20 --memory-save-mode
+python -m vif.run cat_original.jpg --point-radius 20 --memory-save-mode
 ```
 
 Using a Wikimedia Commons [cat picture](https://commons.wikimedia.org/wiki/File:Felis_silvestris_silvestris.jpg)
